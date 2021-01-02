@@ -1,0 +1,15 @@
+img
+{
+  height: 330px;
+}
+ .product .price
+ {
+   position: absolute;
+   top: 0;
+   right: 10px;
+ }
+ .firstRow
+ {
+   border-top: 1px solid black;
+ }
+

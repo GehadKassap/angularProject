@@ -1,0 +1,30 @@
+<section class="container mt-5  d-flex justify-content-center">
+  <form class="form-inline mt-5 my-2 my-lg-0">
+    <input class="form-control mr-sm-2 " type="search" placeholder="Search" aria-label="Search">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</section>
+
+<section class="container mt-5">
+
+
+</section>
+<section class="container mt-4 aa">
+  <h1 class="text-center font-italic">Lorem ipsum dolor sit amet.</h1>
+  <div class="row">
+    <div class="col-md-3 py-5 ">
+      <div class="firstRow w-25"></div>
+      <h3 class="my-3">popular products Right Now.</h3>
+      <p class="text-center">Lorem ipsum dolor sit, amet consectetur .</p>
+      <div class="firstRow "></div>
+    </div>
+    <div class="col-md-3 my-4" *ngFor= "let product of allPrdoucts">
+       <div class="product position-relative">
+             <img src="{{product.image}}" class="w-100" >
+             <h6 class="text-center my-2">{{product.title}}</h6>
+             <span class="badge badge-info p-2 price" >{{product.price}}</span>
+       </div>
+    </div>
+  </div>
+
+</section>
