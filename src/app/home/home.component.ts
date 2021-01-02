@@ -8,6 +8,7 @@ import{ProductserviceService} from '../productservice.service';
 })
 export class HomeComponent implements OnInit {
    allPrdoucts  = [];
+   term:string;
   constructor(public _ProductserviceService : ProductserviceService)
    {
     _ProductserviceService.getAllProducts().subscribe( (allData) => {
