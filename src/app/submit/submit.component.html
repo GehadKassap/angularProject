@@ -1,21 +1,23 @@
 <div class="container mt-5 ">
-  <form class="w-50 m-auto mt-5">
+  <form [formGroup]='submitForm' (ngSubmit)="getFormData(submitForm)" class="w-50 m-auto mt-5">
     <div class="form-group">
       <label for="exampleInputEmail1">Email </label>
-      <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-      <small id="emailHelp" class="form-text text-muted">make sure this email is valid</small>
+      <input [class.is-invalid]="submitForm.get('email').invalid==true && submitForm.get('email').touched==true" formControlName="email" type="email" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp">
+      <small *ngIf="submitForm.get('email').invalid==true && submitForm.get('email').touched==true" id="emailHelp" class="form-text  text-muted mt-2 alert alert-danger">make sure this email is valid</small>
     </div>
     <div class="form-group">
       <label for="exampleInputPassword1">Password</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-      <small id="emailHelp" class="form-text text-muted">make sure this password is valid</small>
+      <input [class.is-invalid]="submitForm.get('password').invalid==true && submitForm.get('password').touched==true" formControlName="password" type="password" class="form-control" id="exampleInputPassword1">
+      <small *ngIf="submitForm.get('password').invalid==true && submitForm.get('password').touched==true"  id="emailHelp" class="form-text text-muted mt-2 alert alert-danger">make sure this password is valid</small>
     </div>
+    <!--submitForm.get('email').invalid==true---->
     <div class="form-group">
       <label for="exampleInputPassword1">Adress</label>
-      <input type="password" class="form-control" id="exampleInputPassword1">
-      <small id="emailHelp" class="form-text text-muted">make sure this adress is valid.</small>
+      <input [class.is-invalid]="submitForm.get('adress').invalid==true && submitForm.get('adress').touched==true"  formControlName="adress" type="text" class="form-control" id="exampleInputPassword1">
+      <small *ngIf="submitForm.get('adress').invalid==true && submitForm.get('adress').touched==true" id="emailHelp" class="form-text text-muted mt-2 alert alert-danger">make sure this adress is valid.</small>
     </div>
 
-    <button type="submit" class="btn btn-primary"><i class="fas fa-check"></i> Submit</button>
+
+    <button [disabled]="submitForm.invalid == true" routerLink="/home" type="submit" class="btn btn-primary"><i class="fas fa-check"></i> Submit</button>
   </form>
 </div>

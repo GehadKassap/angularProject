@@ -7,6 +7,10 @@ img
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
 }
+h2
+{
+  color: #415a77;
+}
 /* .product
 {
   border: 1px solid red;
@@ -28,7 +32,7 @@ img
  }
  .firstRow
  {
-   border-top: 1px solid black;
+   border-top: 1px solid #778da9;
  }
  .product a
  {
@@ -41,7 +45,7 @@ img
  {
    background-color: #e0e1dd;
  }
- button
+.card
  {
    background-color: #415a77;
    border: none;
@@ -51,7 +55,7 @@ img
    -ms-transition: all 0.5s;
    -o-transition: all 0.5s;
  }
- button:hover
+ .card:hover
 {
   background-color: white;
   color:#415a77;

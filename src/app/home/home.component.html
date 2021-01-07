@@ -7,7 +7,7 @@
 
 
 <section class="container mt-4 aa">
-  <h1 class="text-center font-italic">Lorem ipsum dolor sit amet.</h1>
+  <h2 class="text-center font-italic mb-3">Welcome to Our store.</h2>
   <div class="row">
     <div class="col-md-3 py-5 ">
       <div class="firstRow w-25"></div>
@@ -25,7 +25,12 @@
              <span class="text-muted " >{{product.description |seemore :70}}</span>
              <span class="badge spanCat p-2 text-white ml-1" >{{product.category}}</span>  <br>
             </a>
-            <button (click)="getData(i)" class="btn btn-primary mt-1 ml-5" routerLink="/card">add to card</button>
+            <a (click)="getData(product)" class="btn btn-primary mt-2 ml-5 card" >add to card</a>
+            <a class="btn btn-danger m-auto ">
+              <i class="fas fa-minus mr-2 "></i>
+               <i class="fas fa-plus"></i>
+              </a>
+
 
        </div>
     </div>
