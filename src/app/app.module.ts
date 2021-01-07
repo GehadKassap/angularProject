@@ -11,6 +11,7 @@ import { ProfileComponent } from './profile/profile.component';
 import{HttpClientModule} from '@angular/common/http';
 import { SeemorePipe } from './seemore.pipe';
 import { SearchPipe } from './search.pipe';
+import { SubmitComponent } from './submit/submit.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { SearchPipe } from './search.pipe';
     CardComponent,
     ProfileComponent,
     SeemorePipe,
-    SearchPipe
+    SearchPipe,
+    SubmitComponent
   ],
   imports: [
     BrowserModule,

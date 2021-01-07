@@ -1,4 +1,5 @@
-<section class="container py-5">
+<div class="mainContainer">
+  <section class="container py-5">
 
     <input [(ngModel)]='term' class="form-control w-50 m-auto" type="search" placeholder="search here..">
        <!-- <h2>{{term}}</h2>  test 2way binding-->
@@ -15,19 +16,21 @@
       <div class="firstRow "></div>
     </div>
     <!---bdl ma a3ml http connection gded l id ha5od l index-->
-    <div class="col-md-3 my-4" *ngFor= "let product of allPrdoucts|search:term ; let i = index">
-       <div class="product position-relative">
+    <div class="col-md-3 my-4 brdPro " *ngFor= "let product of allPrdoucts|search:term ; let i = index">
+       <div class="product position-relative p-1">
          <a [routerLink]='["/details" , i]' >
              <img src="{{product.image}}" class="w-100" >
              <h6 class="text-center my-2">{{product.title|uppercase}}</h6>
-             <span class="badge badge-warning p-2 price" >{{product.price |currency:'L.E'}}</span>
+             <span class="badge badge-warning p-2 price text-white" >{{product.price |currency:'L.E'}}</span>
              <span class="text-muted " >{{product.description |seemore :70}}</span>
-             <span class="badge badge-info p-2 ml-1" >{{product.category}}</span>  <br>
+             <span class="badge spanCat p-2 text-white ml-1" >{{product.category}}</span>  <br>
             </a>
-            <button class="btn btn-primary mt-1" routerLink="/card">add to card</button>
+            <button (click)="getData(i)" class="btn btn-primary mt-1 ml-5" routerLink="/card">add to card</button>
 
        </div>
     </div>
   </div>
 
 </section>
+
+</div>

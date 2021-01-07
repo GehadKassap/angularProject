@@ -13,8 +13,12 @@ export class HomeComponent implements OnInit {
    {
     _ProductserviceService.getAllProducts().subscribe( (allData) => {
      this.allPrdoucts = allData ;
-     console.log(this.allPrdoucts)
+    //  console.log(this.allPrdoucts)
     })
+  }
+  getData(i) //kda gbt l id bta3 l 3onsor
+  {
+    console.log(i)
   }
 
   ngOnInit() {

@@ -1,3 +1,4 @@
+import { SubmitComponent } from './submit/submit.component';
 import { DetailsComponent } from './details/details.component';
 import { HomeComponent } from './home/home.component';
 import { NgModule } from '@angular/core';
@@ -12,6 +13,7 @@ const routes: Routes = [
   {path:"home" , component : HomeComponent} ,
   {path:"home" , component : HomeComponent} ,
   {path:"card" , component : CardComponent} ,
+  {path:"submit" , component : SubmitComponent} ,
   {path:"profile" , component : ProfileComponent} ,
 ];
 

@@ -1,9 +1,4 @@
-.spanCat
-{
-  background-color: #778da9;
-  line-height: 1.5;
-}
-a
+button
 {
   background-color: #415a77;
   border: none;
@@ -13,14 +8,12 @@ a
   -ms-transition: all 0.5s;
   -o-transition: all 0.5s;
 }
-.submitOrder
-{
-  position: fixed;
-  top: 20%;
-  right: 5%;
-}
-a:hover
+button:hover
 {
   background-color: white;
+  color:#415a77 ;
+}
+label
+{
   color:#415a77 ;
 }
