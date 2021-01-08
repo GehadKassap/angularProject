@@ -7,18 +7,17 @@ import{ProductserviceService} from '../productservice.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
+  btn = `<a class="btn btn-danger m-auto ">
+  <i class="fas fa-minus mr-2 "></i>
+   <i class="fas fa-plus"></i>
+  </a>`;
    allPrdoucts  = [];
-  //  OBJarr = {title:"ah,e" ,
-  //           img:"ah,e" ,
-  //           price: "223"  ,
-  //            category : "lorem" ,
-  //             desc : "loremlorem"};
-   term:string;
+   term:string;  //for search
    allItems = [] ;
-
-
+   productsArr ; //local array
+   newObj
   constructor(public _ProductserviceService : ProductserviceService)
-   {
+   {   //display data;
     _ProductserviceService.getAllProducts().subscribe( (allData) => {
      this.allPrdoucts = allData ;
     //  console.log(this.allPrdoucts)
@@ -29,63 +28,44 @@ export class HomeComponent implements OnInit {
   {
     //to get data from localstorage and count on it ::
     // let allLocalData = localStorage.getItem("productsData");
-    if(localStorage.getItem("productsData") == null)
-    {
-       let productsArr:any = [];
-         productsArr.push(proData)
-    }
-    else
-    {
-      // let idHolder = proData.id ;
-      let indexHolder :number = -1 ;
-       this.allItems = JSON.parse(localStorage.getItem("productsData"));
-      if(indexHolder == -1)
+
+        //this.productsArr.push(proData)
+     this.newObj = proData ;
+
+      //  this.allItems = JSON.parse(localStorage.getItem("productsData"));
+      // if()
+      // {
+      //   this.allItems.push(proData);
+      //   localStorage.setItem("productsData" , JSON.stringify(this.allItems));
+      // }
+      // else
+      // {
+      //   localStorage.setItem("productsData" , JSON.stringify(this.allItems));
+
+      // }
+
+      if(localStorage.getItem("productsData") == null)
       {
-        this.allItems.push(proData);
-        localStorage.setItem("productsData" , JSON.stringify(this.allItems));
+        this.productsArr = [];
+        this.productsArr.push(proData);
+        localStorage.setItem("productsData" , JSON.stringify(this.productsArr));
+
       }
       else
       {
-        localStorage.setItem("productsData" , JSON.stringify(this.allItems));
-
+        this.productsArr.push(proData)
+        localStorage.setItem("productsData" , JSON.stringify(this.productsArr));
       }
 
-      // for(let i = 0 ; i <  this.allItems.length ; i++)
-      // {
-      //   if(parseInt(idHolder) === parseInt(this.allItems[i].id))
-      //   {
-      //     this.allItems[i]
-      //   }
-      // }
-      // this.productsArr = JSON.parse(localStorage.getItem("productsData"));
-      // console.log(this.productsArr)
-      // this.productsArr.push(proData)
-      // localStorage.setItem('productsData' , JSON.stringify(this.productsArr))
-    }
-    // localStorage.setItem('productsData' , JSON.stringify(proData));
 
-    // localStorage.setItem('productsData' , "hi")
+    }
+
+
     /************************** */
 
-    //  console.log("donstexsist")
-    // this.productsArr.push(this.OBJarr)
-    // localStorage.setItem('productsData' , JSON.stringify(this.productsArr));
-  }
+
 
   ngOnInit() {
-    // if(localStorage.getItem("productsData") == null)
-    // {
-    //  this.productsArr = [];
-    // //  console.log("donstexsist")
-    // localStorage.setItem('productsData' , JSON.stringify(this.productsArr))
-    // }
-    // else
-    // {
-    //   // this.productsArr = JSON.parse(localStorage.getItem("productsData"));
-    //   // console.log(this.productsArr) this.holder
-
-
-    // }
 
   }
 

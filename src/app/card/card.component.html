@@ -1,28 +1,27 @@
-<div class="container py-5">
+<!-- <!-- <div class="container py-5">
 
 
-  <h4 class="text-center font-italic">Card :</h4>
-  <a  class="btn btn-primary mt-2 submitOrder" routerLink="/submit">Sumbit Order</a>
-
+  <!-- <h4 class="text-center font-italic">Card :</h4> -->
+  <!-- <a  class="btn btn-primary mt-2 submitOrder" routerLink="/submit">Sumbit Order</a> -->
+<!--
     <div class="row">
       <div class="col-md-12 my-4 ">
-        <div class="product position-relative">
+        <div class="product position-relative"> -->
 
-          <div class="row">
-            <div class="col-md-5">
-              <img height="200px" src="https://images.unsplash.com/photo-1609894825087-787208428b2c?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="w-100" >
+          <!-- <div class="row">
+            <div class="col-md-5" *ngFor="let product of localProducts">
+              <img height="200px" src="{{product.image}}" class="w-100" >
             </div>
-            <div class="col-md-7">
-              <h6 class="text-left my-2">Lorem, ipsum dolor.</h6>
-              <p class="text-muted " >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi assumend
-                a eum voluptatibus consequuntur repellat dicta.</p>
-              <span class="badge badge-info p-2 mr-2 text-white spanCat" >Category</span>
-              <span class="badge badge-warning p-2 price text-white" >100L.E</span>
+            <div class="col-md-7" *ngFor="let product of localProducts">
+              <h6 class="text-left my-2"> {{product.title}}</h6>
+              <p class="text-muted " > {{product.description}} </p>
+              <span class="badge badge-info p-2 mr-2 text-white spanCat" >{{product.category}}</span>
+              <span class="badge badge-warning p-2 price text-white" >{{product.price}}</span>
               <br>
               <input type="number" max="15" min="1" class="w-25 form-control mt-2" placeholder="Quantity">
               <br>
-              <a  class="btn btn-primary mt-2 mr-3" routerLink="/home">remove from card</a>
-
+              <a  class="btn btn-primary mt-2 mr-3" routerLink="/home">remove from card</a> -->
+<!--
             </div>
 
              </div>
@@ -30,31 +29,33 @@
         </div>
      </div>
      <!------------>
-     <div class="col-md-12 my-4 ">
-      <div class="product position-relative">
 
-        <div class="row">
-          <div class="col-md-5">
-            <img height="200px" src="https://images.unsplash.com/photo-1609894825087-787208428b2c?ixid=MXwxMjA3fDB8MHxlZGl0b3JpYWwtZmVlZHwyfHx8ZW58MHx8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" class="w-100" >
-          </div>
-          <div class="col-md-7">
-            <h6 class="text-left my-2">Lorem, ipsum dolor.</h6>
-            <p class="text-muted " >Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi assumend
-              a eum voluptatibus consequuntur repellat dicta.</p>
-            <span class="badge badge-info p-2 mr-2 text-white spanCat" >Category</span>
-            <span class="badge badge-warning p-2 price text-white" >100L.E</span>
-            <br>
-            <input type="number" max="15" min="1" class="w-25 form-control mt-2" placeholder="Quantity">
-            <br>
-            <a  class="btn btn-primary mt-2 mr-3" routerLink="/home"><i class="fas fa-trash"></i> remove from card</a>
 
-          </div>
+    <!-- </div>
 
-           </div>
-
+</div>  -->
+<div class="container my-5">
+  <h4 class="text-center font-italic my-3">Card :</h4>
+  <div class="col-md-9" *ngFor="let product of localProducts">
+    <div class="row">
+      <div class="col-md-5">
+        <img height="200px" src="{{product.image}}" class="w-100 border-rounded" >
       </div>
-   </div>
-
+      <div class="col-md-7">
+        <h6 class="text-left my-2"> {{product.title}}</h6>
+        <span class="text-muted " > {{product.description}} </span>
+        <span class="badge badge-info p-1 ml-1 mr-2 text-white spanCat" >{{product.category}}</span>
+        <span class="badge badge-warning p-1 price text-white" >{{product.price}}</span>
+        <br>
+        <input type="number" max="15" min="1" class="w-25 form-control mt-2" placeholder="Quantity">
+        <br>
+        <a  class="btn btn-primary mb-5 mr-3" routerLink="/home">remove from card</a>
+      </div>
     </div>
 
+  </div>
+  <div class="col-md-3">
+    <a  class="btn btn-primary mt-2 submitOrder" routerLink="/submit">Sumbit Order</a>
+
+  </div>
 </div>

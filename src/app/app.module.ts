@@ -13,6 +13,7 @@ import{HttpClientModule} from '@angular/common/http';
 import { SeemorePipe } from './seemore.pipe';
 import { SearchPipe } from './search.pipe';
 import { SubmitComponent } from './submit/submit.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { SubmitComponent } from './submit/submit.component';
     ProfileComponent,
     SeemorePipe,
     SearchPipe,
-    SubmitComponent
+    SubmitComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
