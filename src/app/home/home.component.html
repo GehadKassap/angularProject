@@ -17,7 +17,7 @@
     </div>
     <!---bdl ma a3ml http connection gded l id ha5od l index-->
     <div class="col-md-3 my-4 brdPro " *ngFor= "let product of allPrdoucts|search:term ; let i = index">
-       <div class="product position-relative p-1">
+       <div class="product position-relative p-2 pro">
          <a [routerLink]='["/details" , i]' >
              <img src="{{product.image}}" class="w-100" >
              <h6 class="text-center my-2">{{product.title|uppercase}}</h6>
@@ -25,7 +25,7 @@
              <span class="text-muted " >{{product.description |seemore :70}}</span>
              <span class="badge spanCat p-2 text-white ml-1" >{{product.category}}</span>  <br>
             </a>
-            <a (click)="getData(product)" class="btn btn-primary mt-2 ml-5 card" >add to card</a>
+            <a (click)="getData(product)" class="btn btn-primary mt-2 ml-2 card" >add to card</a>
             <!-- <a class="btn btn-danger m-auto ">
               <i class="fas fa-minus mr-2 "></i>
                <i class="fas fa-plus"></i>

@@ -2,16 +2,16 @@
 <!-- the problem is how to take the id from url inside the body !!-->
 <div class="container mt-5">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-6 my-3">
       <img src="{{productDetails.image}}" class="w-100 rounded">
     </div>
     <div class="col-md-6 py-5">
       <h5>{{productDetails.title}}</h5>
       <p class="text-muted">{{productDetails.description}}</p>
-      <span class="badge p-2 badge-info">{{productDetails.price}}</span>
+      <span class="badge p-2 badge-warning">{{productDetails.price}}</span>
       <span class="badge spanCat text-white p-2 ml-3">{{productDetails.category}}</span>
       <br>
-      <button class="btn btn-primary mt-2 text-center" routerLink="/card">add to card</button>
+      <button class="btn btn-primary mt-2 text-center p-2" routerLink="/card">add to card</button>
 
     </div>
   </div>
