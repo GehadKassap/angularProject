@@ -11,7 +11,7 @@
       <span class="badge p-2 badge-warning">{{productDetails.price}}</span>
       <span class="badge spanCat text-white p-2 ml-3">{{productDetails.category}}</span>
       <br>
-      <button class="btn btn-primary mt-2 text-center p-2" routerLink="/card">add to card</button>
+      <button class="btn btn-primary mt-2 text-center p-2" (click)="addCard(productDetails)" routerLink="/card">add to card</button>
 
     </div>
   </div>

@@ -16,10 +16,12 @@ export class HomeComponent implements OnInit {
    allItems = [] ;
    productsArr ; //local array
    newObj
+   isLoaded = false ;
   constructor(public _ProductserviceService : ProductserviceService)
    {   //display data;
     _ProductserviceService.getAllProducts().subscribe( (allData) => {
      this.allPrdoucts = allData ;
+     this.isLoaded = true ;
     //  console.log(this.allPrdoucts)
     })
   }

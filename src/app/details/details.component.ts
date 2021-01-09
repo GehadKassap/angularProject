@@ -11,6 +11,7 @@ import {ProductserviceService} from '../productservice.service';
 export class DetailsComponent implements OnInit {
  index ;
  productDetails:any = {} ; //search . it run when initialize it
+ detailsHolder ;
   constructor(_ActivatedRoute :ActivatedRoute , _ProductserviceService:ProductserviceService) {
    this.index = _ActivatedRoute.snapshot.paramMap.get("id"); //get the id
   //  window.alert(this.index);
@@ -19,7 +20,17 @@ export class DetailsComponent implements OnInit {
   });
 
   }
-
+  addCard(prodDetails)
+  {
+      //console.log(prodDetails) //hold obj that will pushed in arr
+      let holder = prodDetails;
+      if(localStorage.getItem("productsData") != null)
+       {
+           this.productDetails = [];
+           this.detailsHolder.push(holder);
+           this.productDetails =JSON.parse(localStorage.getItem("productsData"));
+       }
+  }
   ngOnInit() {
   }
 

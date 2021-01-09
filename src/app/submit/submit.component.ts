@@ -22,5 +22,9 @@ export class SubmitComponent implements OnInit {
   {
       console.log(formData);
   }
+  clearLocal()
+  {
+    localStorage.clear();
+  }
 
 }

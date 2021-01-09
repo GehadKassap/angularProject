@@ -1,12 +1,22 @@
-<div class="mainContainer">
-  <section class="container py-5">
+
+<div class="container my-5">
+  <div *ngIf="!isLoaded" class="row mt-5" >
+    <div class="col-md-12 text-center mt-5">
+      <i class="fas fa-spinner fa-spin fa-3x  text-dark mt-5"></i>
+    </div>
+</div>
+
+<section  *ngIf="isLoaded" class="mainContainer">
+  <div class="container py-5">
 
     <input [(ngModel)]='term' class="form-control w-50 m-auto" type="search" placeholder="search here..">
        <!-- <h2>{{term}}</h2>  test 2way binding-->
+</div>
+
+
 </section>
 
-
-<section class="container mt-4 aa">
+<section *ngIf="isLoaded" class="container mt-4 aa">
   <h2 class="text-center font-italic mb-3">Welcome to Our store.</h2>
   <div class="row">
     <div class="col-md-3 py-5 ">
