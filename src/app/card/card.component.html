@@ -61,7 +61,7 @@
   <div class="col-md-3 submitOrder">
    <div class="form-group">
     <label class="font-italic">total:</label>
-    <input class="form-control w-50"  >
+    <input class="form-control w-50" [value]="total() |currency:' L.E'" >
    </div>
    <a  class="btn btn-primary my-1 px-5" routerLink="/submit">Sumbit Order</a>
 
